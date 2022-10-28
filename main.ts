@@ -17,13 +17,41 @@ input.onButtonPressed(Button.B, function () {
     ok = 0
     notok = 0
     for (let index = 0; index < 5; index++) {
-        for (let index = 0; index < 5; index++) {
-            led.plot(ok, notok)
-            basic.pause(200)
-            ok += 1
-        }
-        ok = 0
-        notok += 1
+        led.plot(ok, notok)
+        basic.pause(200)
+        ok += 1
+    }
+    ok = 4
+    notok += 1
+    for (let index = 0; index < 5; index++) {
+        led.plot(ok, notok)
+        basic.pause(200)
+        ok += -1
+    }
+    ok = 0
+    notok += 2
+    for (let index = 0; index < 5; index++) {
+        led.plot(ok, notok)
+        basic.pause(200)
+        ok += 1
+    }
+    ok = 4
+    notok += 3
+    for (let index = 0; index < 5; index++) {
+        led.plot(ok, notok)
+        basic.pause(200)
+        ok += -1
+    }
+    ok = 0
+    notok += 4
+    for (let index = 0; index < 5; index++) {
+        led.plot(ok, notok)
+        basic.pause(200)
+        ok += 1
+    }
+    for (let index = 0; index < 5; index++) {
+        basic.pause(200)
+        ok += -1
     }
 })
 basic.forever(function () {
